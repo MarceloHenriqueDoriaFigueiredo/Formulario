@@ -1,29 +1,33 @@
 console.log(
     alert ("Seja bem vindo ao formulario sobre a LGPD")
 );
-function validar() {
-    var nome = document.getElementById("nome");
-    var sobrenome = document.getElementById("sobrenome");
-    var Email = document.getElementById("Email");
-    var Experiencia = document.getElementById("Experiencia");
-    
-    if (nome.value == "") {
-        alert ("Nome não informado");
+const nameinput = document.querySelector("#nome");
+const sobrenomeinput = document.querySelector("#sobrenome");
+const emailinput = document.querySelector("#Email");
+const subimitbutton = document.querySelector("#button");
+const erromensagem = document.querySelector(".msg");
 
-        nome.focus();
+subimitbutton.addEventListener("click", (evento) =>{
+    evento.preventDefault()
+
+    const namevalue = nameinput.value;
+    const sobrenomevalue = sobrenomeinput.value;
+    const emailvalue = emailinput.value;
+
+    if (namevalue === "" || sobrenomevalue === "" || emailvalue === ""){
+        erromensagem.textContent = "Dados não preenchidos, por favor preencher todos os campos!";
+        erromensagem.classList = "error";
+        erromensagem.style.textAlign = "Center";
+        setTimeout(() => {
+            erromensagem.textContent = "";
+            erromensagem.classList = "";
+        }, 3000);
         return;
     }
-    if (sobrenome.value == "") {
-        alert("Último nome não informado");
-
-        sobrenome.focus();
-        return;
-    }
-    if (Email.value == "") {
-        alert ("Email não informado");
-
-        Email.focus();
-        return;
-    }
-    alert ("Formulario enviado!");
-}
+    nameinput.value = "";
+    sobrenomeinput.value = "";
+    emailinput.value = "";
+    console.log(
+        alert("Dados enviados")
+    );
+})
