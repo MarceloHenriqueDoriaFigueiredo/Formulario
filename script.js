@@ -1,9 +1,8 @@
 console.log(
-    alert ("Seja bem vindo ao formulario sobre a LGPD")
+    alert("Bem vindo ao formulario LGPD, por favor preencher todas as informações")
 );
-const nameinput = document.querySelector("#nome");
-const sobrenomeinput = document.querySelector("#sobrenome");
-const emailinput = document.querySelector("#Email");
+const nameinput = document.querySelector("#username");
+const emailinput = document.querySelector("#email");
 const subimitbutton = document.querySelector("#button");
 const erromensagem = document.querySelector(".msg");
 
@@ -11,10 +10,9 @@ subimitbutton.addEventListener("click", (evento) =>{
     evento.preventDefault()
 
     const namevalue = nameinput.value;
-    const sobrenomevalue = sobrenomeinput.value;
     const emailvalue = emailinput.value;
 
-    if (namevalue === "" || sobrenomevalue === "" || emailvalue === ""){
+    if (namevalue === "" || emailvalue === ""){
         erromensagem.textContent = "Dados não preenchidos, por favor preencher todos os campos!";
         erromensagem.classList = "error";
         erromensagem.style.textAlign = "Center";
@@ -25,7 +23,6 @@ subimitbutton.addEventListener("click", (evento) =>{
         return;
     }
     nameinput.value = "";
-    sobrenomeinput.value = "";
     emailinput.value = "";
     console.log(
         alert("Dados enviados")

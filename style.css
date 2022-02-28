@@ -1,60 +1,77 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 body{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url("Imagens/information-technology-gfeaf13f4c_1920.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url(Imagens/information-technology-gfeaf13f4c_1920.jpg);
-    color: white;
 }
-#titulo{
-    font-family: Arial, Helvetica, sans-serif;
+.container{
+    background-color: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 750px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.header{
+    background-color: #eee;
+    padding: 20px;
     text-align: center;
-    color: white;   
 }
-#campo{
-    display: flex;
-    flex-direction:row;
-    margin-bottom: 15px;
+.form{
+    padding: 20px;
 }
-#sobrenome{
-    margin-left: 30px;
+.form-control{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
 }
-#nome{
-    margin-left: 8%;
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
 }
-#Nome{
-    background-color:rgba(53, 53, 80, 0.8);
-    margin: auto;
-    padding: 2%;
-    width: 2px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-}
-#email{
-    display: flex;
-}
-#Email{
-    margin-left: 25px;
-    position: absolute;
-    left: 25.8%;
-}
-#button{
-    margin: 0 auto;
-    display: flex;
+.form-control input{
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 10px;
+    font-size: 14px;
+    width: 100%;
     padding: 10px;
-    border-radius: 2px;
-    font-size: 15px;
-    transition: all 0.5s;
-    cursor: pointer;
 }
-#button:hover{
-    background:#b2b6c4;
+.form button{
+    background-color:rgba(40, 40, 66, 0.8);;
+    border: 0.50px solid black;
+    color:white;
+    font-size: 14px;
+    width: 30%;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+.form button:hover{
+    background:#696c75;
     transform: scale(1.1);
-    transition: all 0.5s;
+    transition: all 0.9s;
 }
-.error{
-    background-color: rgb(236, 25, 25);
-    color: white;
-    padding: 5px;
-    margin: 5px;
+#textarea{
+    width: 100%;
+    bottom: 100%;
+}
+.error {
+    background-color: orangered;
 }
